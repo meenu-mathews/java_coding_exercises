@@ -1,7 +1,7 @@
 package com.techreturners.exercise001;
 
 import java.util.List;
-
+import java.util.*;
 public class Exercise001 {
     public String capitalizeWord(String word) {
         // Add your code here
@@ -30,9 +30,11 @@ public class Exercise001 {
         System.out.println(str);
         return str.toString();
     }
-
     public int countLinuxUsers(List<User> users) {
         // Add your code here
-        return users.size();
+        int count = 0;
+         count = Collections.frequency(users, "Linux");
+
+        return count;
     }
 }
