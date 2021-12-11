@@ -40,4 +40,4 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-}
+    }
