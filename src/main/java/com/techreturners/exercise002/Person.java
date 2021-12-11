@@ -1,5 +1,5 @@
 package com.techreturners.exercise002;
-/*public class Person{
+public class Person{
     String firstName ="";
     String lastName = "";
     String city = "";
@@ -11,4 +11,19 @@ package com.techreturners.exercise002;
         this.city = city;
         this.age = age;
     }
-}*/
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
