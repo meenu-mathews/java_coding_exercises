@@ -8,15 +8,11 @@ public class Exercise004 {
     LocalDateTime localDateTime;
     public Exercise004(LocalDate date) {
         localDateTime = date.atStartOfDay().plusSeconds(GIGASEC);
-        System.out.println(localDateTime);
     }
-
     public Exercise004(LocalDateTime dateTime) {
-        dateTime.plusSeconds(GIGASEC);
+        localDateTime = dateTime.plusSeconds(GIGASEC);
     }
-
     public LocalDateTime getDateTime() {
-
         return localDateTime;
     }
 }
