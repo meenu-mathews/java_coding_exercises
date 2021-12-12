@@ -41,13 +41,11 @@ public class Exercise005Test {
         assertTrue(ex005.isPangram("The Five boXing wiZards Jump QuicklY"));
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkSentenceWithMissingLetterXIsNotAPangram() {
         assertFalse(ex005.isPangram("the quick brown fo jumps over the lazy dog"));
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkSentenceWithMissingLetterHIsNotAPangram() {
         assertFalse(ex005.isPangram("five boxing wizards jump quickly at it"));
@@ -61,6 +59,20 @@ public class Exercise005Test {
     @Test
     public void checkSentenceWithNumbersIsAPangram() {
         assertTrue(ex005.isPangram("the 1 quick brown fox jumps over the 2 lazy dogs"));
+    }
+
+    @Test
+    public void checkSentenceWithRepeatedLettersIsAPangram() {
+        assertTrue(ex005.isPangram("the 1 quick brown foxx jumps over the 2 lazy dogs"));
+    }
+
+    @Test
+    public void checkSentenceWithNullIsNotAPangram() {
+        assertFalse(ex005.isPangram(null));
+    }
+    @Test
+    public void checkSentenceWithStringNullIsNotAPangram() {
+        assertFalse(ex005.isPangram("null"));
     }
 
 }

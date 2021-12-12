@@ -2,16 +2,16 @@ package com.techreturners.exercise005;
 public class Exercise005 {
 
     public boolean isPangram(String input) {
-        System.out.println(input.length());
-        if(input.length()==0 || input.equals("null"))
+        if (input == null || input.isEmpty())
             return false;
-        for (int i = 0; i < input.length(); i++)
-        {
-              if(input.matches("^[a-zA-Z]*$"))
-                return true;
+        long c = input.toLowerCase().chars()
+                .filter(ch -> ch >= 'a' && ch <= 'z')
+                .distinct()
+                .count();
 
-        }
-        return true;
+        if (c == 26)
+            return true;
+
+        return false;
     }
-
 }
